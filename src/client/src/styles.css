@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+/* Color list:
+*   Green:  #A0FF40 #80ff00 #54A600
+*   Orange: #FF6E40 #FF3D00 #A62800
+*   Gray:   #636363
+*
+* Fonts:
+*   font-family: 'Caveat', cursive;
+*   font-family: 'Permanent Marker', cursive;
+*/
+
+body{
+  min-height: 100%;
+  background-color: #efefef;
+}
+
+/* Header ****************************************************/
+.solo-nav{
+  background-color: #A0FF40;
+  height: 70px;
+}
+
+.solo-nav a{
+  color: #636363;
+}
+
+.usr-menu a{
+  color: #FF3D00;
+}
+
+.usr-menu a:hover{
+  color: #A62800;
+  background-color: #ffffff;
+}
+
+.solo-nav .navbar-brand{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 35px;
+}
+
+.solo-nav a:hover{
+  color: #636363;
+}
+
+.solo-nav button{
+  color: #ffffff;
+}
+
+
+/* Body ****************************************************/
+.todos-logo{
+  width: 5em;
+}
+
+table{
+  justify-content: right;
+  background-color: #ffffff;
+}
+
+.checkbox-cell{
+  vertical-align: middle;
+  text-align: center;
+}
+
+.form-check-input:checked{
+  background-color: #FF3D00;
+}
+
+.card-body label{
+  color: #6f6f6f;
+}
+
+.todos-card{
+  width: 100%;
+  text-align: left;
+  border: none;
+}
+
+.btn-ok{
+  color: #ffffff;
+  background-color: #80ff00;
+  width: 100%;
+}
+.btn-ok:hover{
+  color: #ffffff;
+  background-color: #54A600;
+}
+
+.btn-delete{
+  color: #ffffff;
+  background-color: #FF3D00;
+}
+.btn-delete:hover{
+  color: #ffffff;
+  background-color: #A62800;
+}
+
+
+/* Footer ****************************************************/
+footer{
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  color: #ffffff;
+  background-color: #636363;
+  height: 50px;
+  bottom: 0;
+}
+
+footer a{
+  color: #A0FF40;
+  text-decoration: none;
+}
+
+footer a:hover{
+  color: #54A600;
+}

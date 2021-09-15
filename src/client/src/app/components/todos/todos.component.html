@@ -1,0 +1,119 @@
+
+<!-- Header ------------------------------------------------------------------------>
+<nav class="navbar navbar-expand-md solo-nav " aria-label="Main Navbar">
+  <div class="container-fluid col-md-8">
+    <a class="navbar-brand" href="#">To Do's</a>
+
+    <!--
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarsExample04" aria-controls="navbarsExample04"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end " id="navbarsExample04">
+      <ul class="navbar-nav ">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown04"
+          data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>
+          </a>
+
+          <ul class="dropdown-menu usr-menu" aria-labelledby="dropdown04">
+            <li><a class="dropdown-item " href="#">Profile</a></li>
+            <li><a class="dropdown-item " href="#">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    -->
+  </div>
+</nav>
+<br>
+
+<!-- Body ------------------------------------------------------------------------>
+<div class="container">
+  <div class="row mx-auto " >
+    <div class="col-md-4 col-sm-12" >
+      <div class="card text-center " >
+        <div class="card-body">
+          <img src="../assets/imgs/iconmonstr-check-mark-13-240.png"
+            class="todos-logo">
+
+          <form (submit)="addTodo($event)" #form="ngForm">
+
+            <!--<input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="todo._id">-->
+
+            <div class="mb-3">
+              <input type="text" class="form-control" [(ngModel)]="title"
+                name="title" placeholder="Add a Todo">
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description: </label>
+              <textarea class="form-control" rows="3" [(ngModel)]="description"
+                name="description" id="description">
+              </textarea>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-ok" > 
+                <i class="fas fa-check"></i>
+              </button>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="col-md-8 col-sm-12 " >
+
+      <table class="table" >
+        <tbody>
+          <tr *ngFor="let todo of todos" >
+            <td class="col-md-2 checkbox-cell" >
+              <input class="form-check-input px-3 py-3" type="checkbox" 
+                  [checked]="todo.completed" (click)="updateTodo(todo)"
+                  aria-label="Checkbox for following text input">
+            </td>
+            <td class="col-md-8" >
+              <div class="card todos-card">
+                <div class="card-body">
+                  <h5 class="" > {{ todo.title }} </h5>
+                  <small>
+                    {{ todo.description }}
+
+                  </small>
+                </div>
+              </div>
+            </td>
+            <td class="col-md-2">
+              <div class="btn-group-vertical " role="group">
+                <button type="button" class="btn btn-ok"
+                  (click)="updateTodo(todo)" > 
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button type="button" class="btn btn-delete" 
+                  (click)="deleteTodo(todo._id)" >
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Footer ------------------------------------------------------------------------>
+<!--
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <a href="https://itkhmexico.com/home/" target="_blank">ITKH México</a> - 2021
+  </div>
+</footer>
+-->
